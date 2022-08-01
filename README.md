@@ -1,7 +1,12 @@
-# TO API CONSUMERS
-You can use these endpoints: http://localhost:8888/swagger-ui/#/pokemon-controller
+# POKEDEX
+This project provides an API REST to access the HeyTrade Pokedex.
 
+## TO API DEVELOPERS
+1. Create the JAR with `./gradlew.bat build`
+2. Build the docker image and run a container with it inside with: `docker-compose up`
+3. Access the swagger docs here: http://localhost:8888/swagger-ui/#/pokemon-controller
 
-# TO API DEVELOPERS
-1. Build the image with: `docker build -t heytrade/pokedex:latest .`
-2. Run the image with `docker run -t -p 8888:8888 --name pokedex heytrade-pokemon-rest:1.0` or `docker-compose up`
+## TO API CONSUMERS
+Once you have deployed the service following the instructions of the previous section:
+- All endpoints are exposed under: http://localhost:8888/v1/pokedex
+- Try them here: http://localhost:8888/swagger-ui/#/pokemon-controller
