@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  pokedex:
+    image: heytrade/pokedex
+    container_name: pokedex
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: java -jar app.jar
+    ports:
+      - ${EXTERNAL_PORT}:${INTERNAL_PORT}
+    restart: unless-stopped
