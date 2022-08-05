@@ -1,4 +1,4 @@
-package com.heytrade.pokemonrest.persistence;
+package com.heytrade.pokemonrest.domain;
 
 public enum PokemonTypeEnum {
     WATER,

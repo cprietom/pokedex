@@ -1,6 +1,5 @@
-package com.heytrade.pokemonrest.persistence.entity;
+package com.heytrade.pokemonrest.data.entity;
 
-import com.heytrade.pokemonrest.persistence.PokemonTypeEnum;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,22 +9,22 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table(name="POKEMON_TYPE")
-public class PokemonType {
+public class PokemonTypeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "POKEMON_ID", nullable = false)
-    private Pokemon pokemon;
+    private PokemonEntity pokemon;
 
     @Column(name = "POKEMON_TYPE", nullable = false)
     private String type;
 
-    public PokemonType() {
+    public PokemonTypeEntity() {
     }
 
-    public PokemonType(Long id, Pokemon pokemon, String type) {
+    public PokemonTypeEntity(Long id, PokemonEntity pokemon, String type) {
         this.id = id;
         this.pokemon = pokemon;
         this.type = type;

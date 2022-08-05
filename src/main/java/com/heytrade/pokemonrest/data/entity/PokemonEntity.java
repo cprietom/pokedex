@@ -1,10 +1,9 @@
-package com.heytrade.pokemonrest.persistence.entity;
+package com.heytrade.pokemonrest.data.entity;
 
 import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.util.List;
 
@@ -12,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @Table(name="POKEMON")
-public class Pokemon {
+public class PokemonEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -22,11 +21,11 @@ public class Pokemon {
     private Boolean favorite;
 
     @OneToMany(mappedBy = "pokemon", cascade = CascadeType.ALL)
-    private List<PokemonType> types;
+    private List<PokemonTypeEntity> types;
 
-    Pokemon() {}
+    PokemonEntity() {}
 
-    public Pokemon(Long id, String name, boolean favorite) {
+    public PokemonEntity(Long id, String name, boolean favorite) {
         this.id = id;
         this.name = name;
         this.favorite = favorite;

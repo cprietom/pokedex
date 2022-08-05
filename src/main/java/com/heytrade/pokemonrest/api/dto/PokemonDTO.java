@@ -1,8 +1,7 @@
-package com.heytrade.pokemonrest.dto;
+package com.heytrade.pokemonrest.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.heytrade.pokemonrest.persistence.PokemonTypeEnum;
-import com.heytrade.pokemonrest.persistence.entity.PokemonType;
+import com.heytrade.pokemonrest.domain.PokemonTypeEnum;
 import lombok.Getter;
 import lombok.Setter;
 

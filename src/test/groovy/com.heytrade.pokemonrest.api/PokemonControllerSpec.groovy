@@ -1,6 +1,6 @@
 package com.heytrade.pokemonrest.api
 
-import com.heytrade.pokemonrest.dto.PokemonDTO
+import com.heytrade.pokemonrest.api.dto.PokemonDTO
 import com.heytrade.pokemonrest.service.PokemonService
 import org.springframework.http.HttpStatus
 import spock.lang.*

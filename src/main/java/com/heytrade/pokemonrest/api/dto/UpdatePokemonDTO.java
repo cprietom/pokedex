@@ -1,4 +1,4 @@
-package com.heytrade.pokemonrest.dto;
+package com.heytrade.pokemonrest.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
